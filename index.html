@@ -1,16 +1,39 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <title>Web App - Simple Interest
+        </title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        Amount<span class="tab"></span><input type="number"  id="principal"onchange="validateAmount()">  <br/>
+        Interest Rate <!--<span class="tab1"></span> --><input onchange="updateRate()" type="range" min="1" max="20" value="default_val" id="rate" step="0.25"><span id="rate_val">10.25%</span><br/>
+        No. of Years<span class="tab1"></span> <select id="years">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <!-- fill in the rest of the values-->
+        </select><br/>
+       Compute :<!--<span id="result"></span>--><br>
 
-        <button onclick="compute()">Compute</button>
+        <button onclick="compute()">Compute Interest</button><br>
+        <span id="result"></span><br>
+        <span id="result"></span>
+    <footer>
+        &#169; This Calculator belongs to Aniket Gupta    
+    </footer>
+    </div>
+    
     </body>
 </html>
